@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Eitai";
+  src: url(fonts/KOT-永代ゴシック-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Opensans Regular";
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Opensans Semibold";
+  src: url(fonts/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Gothic Regular";
+  src: url(fonts/SpecialGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gothic Semibold";
+  src: url(fonts/SpecialGothic-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(fonts/Inter_18pt-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url(fonts/Inter_18pt-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Regular";
+  src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Semibold";
+  src: url(fonts/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: url(fonts/Oswald-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0d0d0d;
+  --navbar-color: #151515;
+  --card-color: #181818;
+  --border-color: #e4e4e4;
+  --primary-text: #ffffff;
+  --secondary-text: #aaaaaa;
+  --primary-accent-color: #00ff85;
+  --secondary-accent-color: #b39cd0;
+  --hover-accent-color: #ff0099;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  min-height: 100vh;
+  font-family: "Opensans Regular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: var(--navbar-color);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  font-family: "Gothic Semibold";
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  background: var(--card-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.navbar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-item {
+  color: var(--primary-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.navbar-item:hover {
+  color: var(--secondary-accent-color);
+}
+
+.card {
+  background-color: var(--card-color);
+  width: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card img {
+  width: 25%;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 2rem;
+  font-family: "Opensans Semibold";
+}
+
+.socials-container {
+  display: flex;
+  gap: 100px;
+}
+
+.socials-container a svg {
+  margin-top: 20px;
+  height: 64px;
+  fill: white;
+}

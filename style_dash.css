@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "Eitai";
+  src: url(fonts/KOT-永代ゴシック-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Opensans Regular";
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Opensans Semibold";
+  src: url(fonts/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Gothic Regular";
+  src: url(fonts/SpecialGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gothic Semibold";
+  src: url(fonts/SpecialGothic-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(fonts/Inter_18pt-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url(fonts/Inter_18pt-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Regular";
+  src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Semibold";
+  src: url(fonts/Oswald-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Oswald Bold";
+  src: url(fonts/Oswald-Bold.ttf);
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --bg-color: #0d0d0d;
+  --navbar-color: #151515;
+  --card-color: #181818;
+  --border-color: #e4e4e4;
+  --primary-text: #ffffff;
+  --secondary-text: #aaaaaa;
+  --primary-accent-color: #00ff85;
+  --secondary-accent-color: #b39cd0;
+  --hover-accent-color: #ff0099;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  min-height: 100vh;
+  font-family: "Opensans Regular";
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: var(--navbar-color);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  font-family: "Gothic Semibold";
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  background: var(--card-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.navbar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-item {
+  color: var(--primary-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.navbar-item:hover {
+  color: var(--secondary-accent-color);
+}
+
+.main-content {
+  margin-top: 50px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+}
+
+.music-section {
+  padding: 0px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.music-section h1 {
+  font-size: 2rem;
+}
+
+.anime-section {
+  padding: 20px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anime-section h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: "Oswald Regular";
+  color: var(--secondary-accent-color);
+}
+
+.music-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.music-card {
+  flex: 0 0 22%;
+  max-width: 180px;
+  min-width: 120px;
+  background: var(--card-color);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.artist-name {
+  font-size: 13px;
+  color: var(--secondary-text);
+}
+
+/* Custom Scrollbar */
+.music-carousel::-webkit-scrollbar-track {
+  background: #181818;
+  border-radius: 10px;
+}
+
+.music-carousel::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 10px;
+}
+
+.music-carousel::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}
+
+.anime-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 0;
+}
+
+.anime-card {
+  background: var(--card-color);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  color: var(--secondary-text);
+  transition: 0.2s ease-in-out;
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+.anime-title {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .navbar-logo {
+    display: none;
+  }
+  .main-content,
+  .music-section,
+  .anime-section {
+    padding: 40px 20px;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .music-section h1,
+  .anime-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .anime-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
